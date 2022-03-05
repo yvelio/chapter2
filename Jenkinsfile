@@ -17,7 +17,7 @@ pipeline {
         stage('Build image ') {
             steps { 
                     sh 'pwd'      
-                    sh 'mvn  clean package -Dquarkus.container-image.build=true  -Dquarkus.kubernetes.deploy=true'
+                    sh 'mvn  clean package -DskipTests -Dquarkus.container-image.build=true  -Dquarkus.kubernetes.deploy=true'
             }
         }
     }
